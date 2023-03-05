@@ -1,0 +1,84 @@
+.btn--state-loginsubmit{
+    background-color: rgb(47, 68, 68) !important;
+    margin-top: 12px ;
+    cursor: pointer;
+}
+
+
+.btn--state-prevloginsubmit{
+    background-color: rgb(47, 68, 68) !important;
+    margin-top: 12px  !important;   
+    opacity: 0.3 !important;
+    cursor: no-drop;
+}
+
+.btn--state-signup{
+    position: relative;
+    top: 7px !important;
+    color: black !important;
+    margin-left: 12px;
+}
+
+
+
+
+.login{
+    width: 100vw !important ;
+    height: 100vh !important;
+    display: flex !important;
+  
+}
+
+.login__left{
+    width: 100vw !important ;
+    height: 100vh !important;
+}
+
+
+.login__state{
+    text-align: center;
+}
+.login__image{
+   height: 90vh !important;
+   width: 100% !important;
+   object-fit: scale-down;
+}
+
+.login__form{
+position: relative;
+left: 204px;
+top: 18px;
+}
+
+.login__formfield{
+    margin-top: 171px;
+    min-width:40vw !important;
+    min-height: 8vh !important;
+    z-index: 100 !important;
+ 
+}
+
+
+.login__group{
+    width: 200px !important;
+    height: 30px !important;
+   margin-top: 12px;
+   margin-bottom: 12px;
+}
+
+.login__inputfield{
+    padding: 0 12px;
+    outline: none;
+}
+
+
+.btn--state-logindirect{
+    background-color: aliceblue !important;
+    color: black !important;
+    margin-left: 12px;
+}
+
+
+.login__btngroup{
+    margin-top: 12px !important;
+} 

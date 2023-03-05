@@ -1,0 +1,60 @@
+.signup{
+    width: 100vw !important ;
+    height: 100vh !important;
+    display: flex !important;
+  
+}
+
+.signup__imagelogo{
+    width: 100vw !important ;
+    height: 100vh !important;
+}
+
+
+.signup__state{
+    text-align: center;
+}
+.signup__image{
+   height: 90vh !important;
+   width: 100% !important;
+   object-fit: scale-down;
+}
+
+.signup__form{
+position: relative;
+left: 204px;
+top: 18px;
+}
+
+.signup__formfield{
+    margin-top: 171px;
+    min-width:40vw !important;
+    min-height: 8vh !important;
+    z-index: 100 !important;
+ 
+}
+
+
+.signup__group{
+    width: 200px !important;
+    height: 30px !important;
+   margin-top: 12px;
+   margin-bottom: 12px;
+}
+
+.signup__inputfield{
+    padding: 0 12px;
+    outline: none;
+}
+
+
+.btn--state-logindirect{
+    background-color: aliceblue !important;
+    color: black !important;
+    margin-left: 12px;
+}
+
+
+.signup__btngroup{
+    margin-top: 12px !important;
+}
