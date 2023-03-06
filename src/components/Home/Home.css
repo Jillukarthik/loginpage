@@ -25,9 +25,9 @@
 }
 
 .btn--state-logout {
-  position: sticky !important;
-  top: 90vh !important;
+  position: relative !important;
  left: 1400px !important;
+ top :19px !important;
 background-color: red !important;
 }
 
@@ -35,4 +35,18 @@ background-color: red !important;
 .btn--state-popover{
    margin-top: 200px !important;
    margin-left: 608px !important;
+}
+
+.popover__confirmation{
+  font-weight: 700 !important;
+}
+
+.popover__footer{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.popover__btngroup{
+  width: fit-content !important ;
+  height: fit-content !important;
 }

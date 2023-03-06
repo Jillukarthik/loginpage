@@ -21,6 +21,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getPosts } from "../../feature/postSlice/postSlice";
 import { Spinner } from "@chakra-ui/react";
 import { useLocation, useNavigate } from "react-router-dom";
+import headerimg from "../../assests/headerimg.jpg";
 function Home() {
   const { posts, loading } = useSelector((state) => state.post);
   const dispatch = useDispatch();
@@ -48,10 +49,9 @@ function Home() {
       <Box>
         <Image
           className="home__image"
-          src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg"
+          src={headerimg}
         />
       </Box>
-      <Box className="home__loader">{loading && <Spinner />}</Box>
       <Box>
         <Button className="btn btn--state-logout" onClick={onToggle}>
           logout
@@ -64,16 +64,16 @@ function Home() {
           closeOnBlur={false}
         >
           <PopoverContent className="btn btn--state-popover">
-            <PopoverHeader fontWeight="semibold">Confirmation</PopoverHeader>
+            <PopoverHeader className="popover__confirmation">Confirmation</PopoverHeader>
             <PopoverArrow />
             <PopoverCloseButton />
             <PopoverBody>
-              Are you sure you want to continue with your action?
+              Are you sure you want to logout
             </PopoverBody>
-            <PopoverFooter display="flex" justifyContent="flex-end">
-              <ButtonGroup size="sm">
-                <Button variant="outline" onClick={onClose}>Cancel</Button>
-                <Button colorScheme="red" onClick={redirectLogin}>Apply</Button>
+            <PopoverFooter className="popover__footer">
+              <ButtonGroup className="popover__btngroup">
+                <Button variant="outline" onClick={onClose}>No</Button>
+                <Button colorScheme="red" onClick={redirectLogin}>Yes</Button>
               </ButtonGroup>
             </PopoverFooter>
           </PopoverContent>
@@ -83,6 +83,7 @@ function Home() {
         <Heading as="h1" className="home__username">
           Welcome   {noSpecialCharacters}!!!
         </Heading>
+        <Box className="home__loader">{loading && <Spinner />}</Box>
         <Box className="home__data">
           <Box className="home__dataitems">
             {posts.map((items) => (

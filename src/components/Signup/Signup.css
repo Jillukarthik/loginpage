@@ -2,7 +2,6 @@
     width: 100vw !important ;
     height: 100vh !important;
     display: flex !important;
-  
 }
 
 .signup__imagelogo{
@@ -22,8 +21,8 @@
 
 .signup__form{
 position: relative;
-left: 204px;
 top: 18px;
+margin-left: 210px !important;
 }
 
 .signup__formfield{
