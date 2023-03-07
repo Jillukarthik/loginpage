@@ -5,14 +5,12 @@ import {
   Image,
   useDisclosure,
   Popover,
-  PopoverTrigger,
   PopoverContent,
   PopoverHeader,
   PopoverBody,
   PopoverFooter,
   PopoverArrow,
   PopoverCloseButton,
-  PopoverAnchor,
   ButtonGroup,
 } from "@chakra-ui/react";
 import "./Home.css";
@@ -31,14 +29,15 @@ function Home() {
   useEffect(() => {
     setTimeout(() => {
       dispatch(getPosts());
-    }, 2000);
+    }, 5000);
   }, []);
 
   const navigate = useNavigate();
 
   const redirectLogin = () => {
     navigate("/");
-  };
+  }
+
 
   const noSpecialCharacters = logindata.replace("@gmail.com", "");
   console.log(noSpecialCharacters);
@@ -47,10 +46,7 @@ function Home() {
   return (
     <Box className="home">
       <Box>
-        <Image
-          className="home__image"
-          src={headerimg}
-        />
+        <Image className="home__image" src={headerimg} />
       </Box>
       <Box>
         <Button className="btn btn--state-logout" onClick={onToggle}>
@@ -64,16 +60,20 @@ function Home() {
           closeOnBlur={false}
         >
           <PopoverContent className="btn btn--state-popover">
-            <PopoverHeader className="popover__confirmation">Confirmation</PopoverHeader>
+            <PopoverHeader className="popover__confirmation">
+              Confirmation
+            </PopoverHeader>
             <PopoverArrow />
             <PopoverCloseButton />
-            <PopoverBody>
-              Are you sure you want to logout
-            </PopoverBody>
+            <PopoverBody>Are you sure you want to logout</PopoverBody>
             <PopoverFooter className="popover__footer">
               <ButtonGroup className="popover__btngroup">
-                <Button variant="outline" onClick={onClose}>No</Button>
-                <Button colorScheme="red" onClick={redirectLogin}>Yes</Button>
+                <Button variant="outline" onClick={onClose}>
+                  No
+                </Button>
+                <Button colorScheme="red" onClick={redirectLogin}>
+                  Yes
+                </Button>
               </ButtonGroup>
             </PopoverFooter>
           </PopoverContent>
@@ -81,13 +81,15 @@ function Home() {
       </Box>
       <Box>
         <Heading as="h1" className="home__username">
-          Welcome   {noSpecialCharacters}!!!
+          Welcome {noSpecialCharacters}!!!
         </Heading>
         <Box className="home__loader">{loading && <Spinner />}</Box>
         <Box className="home__data">
           <Box className="home__dataitems">
-            {posts.map((items) => (
+            {posts.map((items,index) => (
+              <Box>
               <h1 key={items.id}>{items.title}</h1>
+              </Box>
             ))}
           </Box>
         </Box>
